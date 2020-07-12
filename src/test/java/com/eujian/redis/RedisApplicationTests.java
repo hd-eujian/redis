@@ -13,6 +13,7 @@ class RedisApplicationTests {
 
     @Test
     void contextLoads() {
+        stringRedisTemplate.opsForValue().set("a","123");
         String o = stringRedisTemplate.opsForValue().get("a");
         System.out.println(o);
     }
